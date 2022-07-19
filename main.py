@@ -7,6 +7,7 @@ from api import *
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-u", "--user", required=True, help="username of account to scan")
+ap.add_argument("-a", "--password", required=True, help="userpassword of account to scan")
 ap.add_argument("-p", "--post", action="store_true", help="image info of user uploads")
 args = vars(ap.parse_args())
 	
@@ -17,3 +18,6 @@ if args['user']:
 
 if args['post']:
 	post_info()
+ 
+if args['password']:
+         password_info()
